@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-06-28T06:44:45.664Z</updated>
+  <updated>2022-06-28T16:07:04.208Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,18 +17,80 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>教程（二）hexo框架的搭建及部署</title>
+    <link href="http://example.com/2022/06/28/%E6%95%99%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89hexo%E6%A1%86%E6%9E%B6%E7%9A%84%E6%90%AD%E5%BB%BA%E5%8F%8A%E9%83%A8%E7%BD%B2/"/>
+    <id>http://example.com/2022/06/28/%E6%95%99%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89hexo%E6%A1%86%E6%9E%B6%E7%9A%84%E6%90%AD%E5%BB%BA%E5%8F%8A%E9%83%A8%E7%BD%B2/</id>
+    <published>2022-06-28T15:50:58.000Z</published>
+    <updated>2022-06-28T16:07:04.208Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="部署配置hexo"><a href="#部署配置hexo" class="headerlink" title="部署配置hexo"></a>部署配置hexo</h2><h3 id="1-从哪下载安装hexo"><a href="#1-从哪下载安装hexo" class="headerlink" title="1.从哪下载安装hexo"></a>1.从哪下载安装hexo</h3><p>​使用hexo框架我们需要node.js，那么什么事node.js呢。</p><p>​我们要是不想浏览器事必躬亲，那就<strong>把活扔给服务器干</strong>；当服务器一下子服务很多浏览器时就<strong>不能认死理非要串行操作，</strong>要灵活统筹，<strong>同时开始几件事，哪件完事关闭哪件。</strong></p><p>这三个特征用江湖切口说就叫：</p><ul><li><strong>服务器端JavaScript处理：</strong>server-side JavaScript execution </li><li><strong>非阻断&#x2F;异步I&#x2F;O</strong>：non-blocking or asynchronous I&#x2F;O</li><li><strong>事件驱动</strong>：Event-driven</li></ul><p>Node.js就是这样一个服务器端的、非阻断式I&#x2F;O的、事件驱动的JavaScript运行环境，重要的是，他是开源的。</p><p>​首先我们需要安装node.js，可以参考以下教程：</p><p><a href="https://www.runoob.com/nodejs/nodejs-install-setup.html">安装node.js教程</a></p><p>​上述菜鸟教程中除了node.js的安装教程意外还有node.js的介绍以及其常用开发功能介绍，有兴趣的小伙伴可以自行了解</p><p>安装完成node.js以后我们怎么使用它呢，这里就要提到其独特的安装包管理软件npm了。</p><p>​NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题，常见的使用场景有以下几种：</p><ul><li>允许用户从NPM服务器下载别人编写的第三方包到本地使用。</li><li>允许用户从NPM服务器下载并安装别人编写的命令行程序到本地使用。</li><li>允许用户将自己编写的包或命令行程序上传到NPM服务器供别人使用。</li></ul><p>​部署hexo框架就需要用到npm来下载hexo的第三方安装包，这将会节约我们大量的时间。</p><h3 id="2-怎么下载hexo"><a href="#2-怎么下载hexo" class="headerlink" title="2.怎么下载hexo"></a>2.怎么下载hexo</h3><p>​首先我们需要在终端（或者说是cmd命令下执行也行）执行命令安装webpack：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack -g</span><br></pre></td></tr></table></figure><p>​WebPack可以看做是<strong>模块打包机</strong>：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其打包为合适的格式以供浏览器使用。</p><p>安装完成后我们进入到我们选择好的git仓库，与github创建好github pages关联的仓库，准备一个空的文件夹，可以命名为blog或者任何你喜欢的名称，在终端中进入该目录下进行以下操作：</p><p>​输入命令下载hexo，并进行初始化</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure><p>​我选择的文件夹命名为blog，在目录下运行上述命令后，文件夹中应该有下图中除了主题配置文件_config.butterfly.yml之外的的所有文件</p><p><img src="/Users/blankhoney/myblog/blog/source/_posts/image-20220628232853869.png" alt="image-20220628232853869"></p><p>​如果你也看到相同画面，恭喜你，你的hexo已经部署在你的主机上了，此时我们只需要稍微配置hexo，就可以开始运行我们的博客网站了。</p><h3 id="3-部署并配置运行我们的博客网站"><a href="#3-部署并配置运行我们的博客网站" class="headerlink" title="3. 部署并配置运行我们的博客网站"></a>3. 部署并配置运行我们的博客网站</h3><p>接下来我们继续在终端的该目录下输入以下命令：</p><p>首先是静态部署命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure><p>​其次是启动本地服务器命令，该命令也可以用于后期调试使用：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>​接下来我们的终端应该会提示以下信息：</p><p><img src="/Users/blankhoney/myblog/blog/source/_posts/image-20220628233324039.png" alt="image-20220628233324039"></p><p>​提示该信息证明服务器启动成功，我们可以通过端口号为4000的端口访问我们的静态网页，在浏览器输入<a href="http://localhost:4000/%EF%BC%8C%E8%BF%9B%E5%85%A5%E8%AF%A5%E7%BD%91%E9%A1%B5%E5%90%8E%E6%88%91%E4%BB%AC%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E5%A6%82%E4%B8%8B%E7%94%BB%E9%9D%A2%EF%BC%9A">http://localhost:4000/，进入该网页后我们可以看到如下画面：</a></p><p><img src="/Users/blankhoney/myblog/blog/source/_posts/image-20220628233525630.png" alt="image-20220628233525630"></p><p>​此时我们的博客其实已经设置好了，已经可以在本地使用了，现在我们要做的是将我们的hexo部署到我们的github上去。</p><p>​首先我们需要找到位于hexo框架目录下的配置文件 _config.yml：</p><p><img src="/Users/blankhoney/myblog/blog/source/_posts/image-20220628233840874.png" alt="image-20220628233840874"></p><p>​打开文件，我们将文件底部的信息补充完整：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/blankhoney/blankhoney.github.io.git  #你的仓库地址</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure><p>​<strong>这里注意，github的主分支之前已经修改为main，如果继续使用master可能会在接下来的步骤中报错。</strong></p><p>​其中我们需要填写的仓库地址位于github仓库的下述位置：</p><p><img src="/Users/blankhoney/myblog/blog/source/_posts/image-20220628234205144.png" alt="image-20220628234205144"></p><p>​配置文件修改完成后，我们下载git部署插件，终端根目录（hexo框架目录，以后简称根目录）下运行下述命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>​安装成功后依次输入下述命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean   #清除缓存文件 db.json 和已生成的静态文件 public</span><br><span class="line">hexo g       #生成网站静态文件到默认设置的 public 文件夹(hexo generate 的缩写)</span><br><span class="line">hexo d       #自动生成网站静态文件，并部署到设定的仓库(hexo deploy 的缩写)</span><br></pre></td></tr></table></figure><p>​如无报错，部署成功，报错请查看报错位置以及报错信息修改错误。</p><p>​此项操作完成后，打开浏览器，输入 <a href="https://link.zhihu.com/?target=https://fengye97.github.io/">https://xxx.github.io</a> 就可以打开你的网页了：</p><p><img src="/Users/blankhoney/myblog/blog/source/_posts/image-20220628234636295.png" alt="image-20220628234636295"></p><p>​当然我这个是配置完成主题后才会拥有的画面，你会看到的依然是最初的博客画面，但是这也意味着你的博客部署已经成功，现在你已经可以开始编写上传你的博客了，当然如果你需要美化自己的博客的话，可以参考我的下一个教程。</p><p><img src="/Users/blankhoney/myblog/blog/source/_posts/image-20220628233525630.png" alt="image-20220628233525630"></p><p>​博客主题美化教程的链接如下：</p><p><a href="">博客主题美化butterfly</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;部署配置hexo&quot;&gt;&lt;a href=&quot;#部署配置hexo&quot; class=&quot;headerlink&quot; title=&quot;部署配置hexo&quot;&gt;&lt;/a&gt;部署配置hexo&lt;/h2&gt;&lt;h3 id=&quot;1-从哪下载安装hexo&quot;&gt;&lt;a href=&quot;#1-从哪下载安装hexo&quot; cla</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="博客搭建" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="导航" scheme="http://example.com/tags/%E5%AF%BC%E8%88%AA/"/>
+    
+    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="blog" scheme="http://example.com/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教程（一） github仓库的创建与同步</title>
+    <link href="http://example.com/2022/06/28/%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89-github%E4%BB%93%E5%BA%93%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%8C%E6%AD%A5/"/>
+    <id>http://example.com/2022/06/28/%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89-github%E4%BB%93%E5%BA%93%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%8C%E6%AD%A5/</id>
+    <published>2022-06-28T13:02:21.000Z</published>
+    <updated>2022-06-28T14:09:55.046Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="安装使用git"><a href="#安装使用git" class="headerlink" title="安装使用git"></a>安装使用git</h2><h3 id="1-git是什么以及git的安装"><a href="#1-git是什么以及git的安装" class="headerlink" title="1. git是什么以及git的安装"></a>1. git是什么以及git的安装</h3><p>​git 是版本控制软件，目前最先进最流行的</p><p>​github 是一个网站，用于广大开发者开源自己的代码，也提供私有仓库的付费功能，而它采用的版本控制软件就是git</p><p>​要完成博客的搭建我们需要用到git的帮助，所以我们需要安装git，安装过程参考下述链接：</p><p><a href="https://www.runoob.com/git/git-install-setup.html">git安装教程</a></p><p>​在安装完成git后我们可以熟悉git的基本操作，在上述菜鸟教程的安装教程后也有基本的操作教程。</p><h3 id="2-使用github创建仓库并且使用git同步仓库"><a href="#2-使用github创建仓库并且使用git同步仓库" class="headerlink" title="2. 使用github创建仓库并且使用git同步仓库"></a>2. 使用github创建仓库并且使用git同步仓库</h3><p>​我们要用git上传文件到GitHub首先得利用SSH登录远程主机，而登录方式有两种：一种是口令登录；另一种是公钥登录。口令登录每次都要输入密码十分麻烦，而公钥登录就省去了输入密码的步骤，所以我们选择公钥授权。</p><ol><li><p>如何获取ssh key</p><p><a href="https://www.runoob.com/w3cnote/view-ssh-public-key.html">获得ssh key</a></p></li><li><p>如何使用ssh key添加到github</p><p><a href="https://www.huangziheng.com/docs/git/connecting-to-github-with-ssh/">使用ssh连接到Github</a></p></li><li><p>如何使用git同步github仓库</p><p><a href="https://www.runoob.com/w3cnote/git-guide.html">github使用git教程</a></p></li></ol><h3 id="3-创建一个用于博客的仓库"><a href="#3-创建一个用于博客的仓库" class="headerlink" title="3. 创建一个用于博客的仓库"></a>3. 创建一个用于博客的仓库</h3><p>​经过上面的多个教程的学习（甚至不用学习，我们只需要按教程走一遍流程），我们对于github的使用以及git的使用都有了一定的经验，创建用于托管静态网页的仓库与创建普通仓库没有什特殊的操作，唯一的区别是我们需要输入特殊的仓库名称：</p><p><img src="/Users/blankhoney/myblog/blog/source/_posts/image-20220628215011336.png" alt="image-20220628215011336"></p><p>​需要注意的有两点：</p><ol><li><p>仓库名称需要为：用户名.github.io</p><p>如果我们不租凭域名，该名称就是我们后续登入博客的连接。</p></li><li><p>在同步时需要注意，最近github已将主分支更名为main，并不是之前的master，使用git以及后续填写信息时需要注意。</p></li></ol><p>​创建成功后我们会得到如下仓库：</p><p><img src="/Users/blankhoney/myblog/blog/source/_posts/image-20220628220529838.png" alt="image-20220628220529838"></p><p>​记录下HTTPS链接，接下来的hexo框架配置过程会用到。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;安装使用git&quot;&gt;&lt;a href=&quot;#安装使用git&quot; class=&quot;headerlink&quot; title=&quot;安装使用git&quot;&gt;&lt;/a&gt;安装使用git&lt;/h2&gt;&lt;h3 id=&quot;1-git是什么以及git的安装&quot;&gt;&lt;a href=&quot;#1-git是什么以及git的安装&quot;</summary>
+      
+    
+    
+    
+    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="博客搭建" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>教程 搭建简易博客</title>
     <link href="http://example.com/2022/06/28/%E6%95%99%E7%A8%8B-%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93%E5%8D%9A%E5%AE%A2/"/>
     <id>http://example.com/2022/06/28/%E6%95%99%E7%A8%8B-%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93%E5%8D%9A%E5%AE%A2/</id>
     <published>2022-06-28T06:03:59.000Z</published>
-    <updated>2022-06-28T06:44:45.664Z</updated>
+    <updated>2022-06-28T16:07:03.213Z</updated>
     
-    <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="利用hexo搭建一个免费的个人博客"><a href="#利用hexo搭建一个免费的个人博客" class="headerlink" title="利用hexo搭建一个免费的个人博客"></a>利用hexo搭建一个免费的个人博客</h2><p>​<strong>搭建环境只需要配置有git和node.js就能够满足搭建的完成，博主本人使用的是m1芯片的macbookpro，但无论是x86架构的芯片或是windows，linux系统都能够完成博客的搭建。</strong></p><h3 id="1-选择自己的云端仓库"><a href="#1-选择自己的云端仓库" class="headerlink" title="1. 选择自己的云端仓库"></a>1. 选择自己的云端仓库</h3><p>​个人博客的搭建方式很多，博客框架也很多，我选择的是hexo。</p><p>​Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Heroku上，是搭建博客的首选框架。</p><p>​因此，我们需要一个托管平台，这里我们可以使用免费的github，gitee等，我选择的是github平台，该平台也是非常多博主的选择之一，具体的github注册流程可以参考下述链接：</p><p><a href="https://segmentfault.com/a/1190000040770337">github注册教程</a></p><p>​在完成了github的注册以后我们需要熟悉github的仓库操作，并且我们利用github免费提供的网页寄存服务器github pages仓库同步我们本地的项目用于存放博客的静态网页，具体的创建方法如下：</p><p><a href="">githubpages创建教程</a></p><h3 id="2-部署属于自己的个人博客"><a href="#2-部署属于自己的个人博客" class="headerlink" title="2. 部署属于自己的个人博客"></a>2. 部署属于自己的个人博客</h3><p>​将hexo框架部署在本地，以及使用hexo的时候我们需要依靠node.js提供帮助，这是一个服务器端的、非阻断式I&#x2F;O的、开源的、事件驱动的JavaScript运行环境，能够帮助我们快速部署hexo。同时我们也需要依靠node.js的插件来将本地部署的hexo框架与我们的git仓库同步，实现博客的托管。</p><p>​具体的操作步骤可以参考下面的教程：</p><p><a href="">hexo框架部署配置以及托管教程</a></p><p>​只要跟随上述教程完成hexo的部署和托管，恭喜你，你已经是一名博主了，你已经拥有了属于自己的个人博客，但是如果你希望自己的博客更为美观，那你需要配置子的美化主题，美化主题有很多，比较常见的有轻量级的next，功能繁多的butterfly等，我选择是butterfly主题来美化自己的博客。</p><h3 id="3-完成客制化的博客美化"><a href="#3-完成客制化的博客美化" class="headerlink" title="3. 完成客制化的博客美化"></a>3. 完成客制化的博客美化</h3>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h2&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;利用hexo搭建一个免费的个人博客&quot;&gt;&lt;a href=&quot;#利用hexo搭建一个免费的个人博客&quot; class=&quot;headerlink&quot; title=&quot;利用hexo搭建一个免费的个人博客&quot;&gt;&lt;/a&gt;利用hexo搭建一个免费的个人博客&lt;/h2&gt;&lt;p&gt;​	&lt;strong&gt;</summary>
       
     
     
