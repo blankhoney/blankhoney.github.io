@@ -38,11 +38,11 @@
     <category term="博客搭建" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
     <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="导航" scheme="http://example.com/tags/%E5%AF%BC%E8%88%AA/"/>
-    
-    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
     
     <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
@@ -72,9 +72,9 @@
     <category term="博客搭建" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
-    
     <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -83,9 +83,9 @@
     <link href="http://example.com/2022/06/28/%E6%95%99%E7%A8%8B-%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93%E5%8D%9A%E5%AE%A2/"/>
     <id>http://example.com/2022/06/28/%E6%95%99%E7%A8%8B-%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93%E5%8D%9A%E5%AE%A2/</id>
     <published>2022-06-28T06:03:59.000Z</published>
-    <updated>2022-06-28T16:07:03.213Z</updated>
+    <updated>2022-06-28T16:14:41.755Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="利用hexo搭建一个免费的个人博客"><a href="#利用hexo搭建一个免费的个人博客" class="headerlink" title="利用hexo搭建一个免费的个人博客"></a>利用hexo搭建一个免费的个人博客</h2><p>​<strong>搭建环境只需要配置有git和node.js就能够满足搭建的完成，博主本人使用的是m1芯片的macbookpro，但无论是x86架构的芯片或是windows，linux系统都能够完成博客的搭建。</strong></p><h3 id="1-选择自己的云端仓库"><a href="#1-选择自己的云端仓库" class="headerlink" title="1. 选择自己的云端仓库"></a>1. 选择自己的云端仓库</h3><p>​个人博客的搭建方式很多，博客框架也很多，我选择的是hexo。</p><p>​Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Heroku上，是搭建博客的首选框架。</p><p>​因此，我们需要一个托管平台，这里我们可以使用免费的github，gitee等，我选择的是github平台，该平台也是非常多博主的选择之一，具体的github注册流程可以参考下述链接：</p><p><a href="https://segmentfault.com/a/1190000040770337">github注册教程</a></p><p>​在完成了github的注册以后我们需要熟悉github的仓库操作，并且我们利用github免费提供的网页寄存服务器github pages仓库同步我们本地的项目用于存放博客的静态网页，具体的创建方法如下：</p><p><a href="">githubpages创建教程</a></p><h3 id="2-部署属于自己的个人博客"><a href="#2-部署属于自己的个人博客" class="headerlink" title="2. 部署属于自己的个人博客"></a>2. 部署属于自己的个人博客</h3><p>​将hexo框架部署在本地，以及使用hexo的时候我们需要依靠node.js提供帮助，这是一个服务器端的、非阻断式I&#x2F;O的、开源的、事件驱动的JavaScript运行环境，能够帮助我们快速部署hexo。同时我们也需要依靠node.js的插件来将本地部署的hexo框架与我们的git仓库同步，实现博客的托管。</p><p>​具体的操作步骤可以参考下面的教程：</p><p><a href="">hexo框架部署配置以及托管教程</a></p><p>​只要跟随上述教程完成hexo的部署和托管，恭喜你，你已经是一名博主了，你已经拥有了属于自己的个人博客，但是如果你希望自己的博客更为美观，那你需要配置子的美化主题，美化主题有很多，比较常见的有轻量级的next，功能繁多的butterfly等，我选择是butterfly主题来美化自己的博客。</p><h3 id="3-完成客制化的博客美化"><a href="#3-完成客制化的博客美化" class="headerlink" title="3. 完成客制化的博客美化"></a>3. 完成客制化的博客美化</h3>]]></content>
+    <content type="html"><![CDATA[<h2 id="利用hexo搭建一个免费的个人博客"><a href="#利用hexo搭建一个免费的个人博客" class="headerlink" title="利用hexo搭建一个免费的个人博客"></a>利用hexo搭建一个免费的个人博客</h2><p>​<strong>搭建环境只需要配置有git和node.js就能够满足搭建的完成，博主本人使用的是m1芯片的macbookpro，但无论是x86架构的芯片或是windows，linux系统都能够完成博客的搭建。</strong></p><h3 id="1-选择自己的云端仓库"><a href="#1-选择自己的云端仓库" class="headerlink" title="1. 选择自己的云端仓库"></a>1. 选择自己的云端仓库</h3><p>​个人博客的搭建方式很多，博客框架也很多，我选择的是hexo。</p><p>​Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Heroku上，是搭建博客的首选框架。</p><p>​因此，我们需要一个托管平台，这里我们可以使用免费的github，gitee等，我选择的是github平台，该平台也是非常多博主的选择之一，具体的github注册流程可以参考下述链接：</p><p><a href="https://segmentfault.com/a/1190000040770337">github注册教程</a></p><p>​在完成了github的注册以后我们需要熟悉github的仓库操作，并且我们利用github免费提供的网页寄存服务器github pages仓库同步我们本地的项目用于存放博客的静态网页，具体的创建方法如下：</p><p><a href="">githubpages创建教程</a></p><h3 id="2-部署属于自己的个人博客"><a href="#2-部署属于自己的个人博客" class="headerlink" title="2. 部署属于自己的个人博客"></a>2. 部署属于自己的个人博客</h3><p>​将hexo框架部署在本地，以及使用hexo的时候我们需要依靠node.js提供帮助，这是一个服务器端的、非阻断式I&#x2F;O的、开源的、事件驱动的JavaScript运行环境，能够帮助我们快速部署hexo。同时我们也需要依靠node.js的插件来将本地部署的hexo框架与我们的git仓库同步，实现博客的托管。</p><p>​具体的操作步骤可以参考下面的教程：</p><p><a href="">hexo框架部署配置以及托管教程</a></p><p>​只要跟随上述教程完成hexo的部署和托管，恭喜你，你已经是一名博主了，你已经拥有了属于自己的个人博客，但是如果你希望自己的博客更为美观，那你需要配置子的美化主题，美化主题有很多，比较常见的有轻量级的next，功能繁多的butterfly等，我选择是butterfly主题来美化自己的博客。</p><h3 id="3-完成客制化的博客美化"><a href="#3-完成客制化的博客美化" class="headerlink" title="3. 完成客制化的博客美化"></a>3. 完成客制化的博客美化</h3><p>​使用 Hexo 博客时，我们最希望的是找到适合自己的一款主题，这些主题中都饱含着关于写作的方法和 Hexo 主题修改，这些修改方法可以查阅本文参考中的 Hexo 官方文档，这里不再赘述。</p><p>​比较主流的美化主题有</p>]]></content>
     
     
       
@@ -100,11 +100,11 @@
     <category term="博客搭建" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
     <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="导航" scheme="http://example.com/tags/%E5%AF%BC%E8%88%AA/"/>
-    
-    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
     
     <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
