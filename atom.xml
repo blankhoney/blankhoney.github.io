@@ -38,11 +38,11 @@
     <category term="博客搭建" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
-    
     <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="导航" scheme="http://example.com/tags/%E5%AF%BC%E8%88%AA/"/>
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
     
     <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
@@ -72,9 +72,9 @@
     <category term="博客搭建" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
-    
     <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
     
   </entry>
   
@@ -100,11 +100,11 @@
     <category term="博客搭建" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
-    
     <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="导航" scheme="http://example.com/tags/%E5%AF%BC%E8%88%AA/"/>
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
     
     <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
