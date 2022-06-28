@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-06-28T16:47:56.771Z</updated>
+  <updated>2022-06-28T16:55:55.809Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>教程（三） hexo主题美化之next</title>
+    <link href="http://example.com/2022/06/29/%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%89%EF%BC%89-hexo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E4%B9%8Bnext/"/>
+    <id>http://example.com/2022/06/29/%E6%95%99%E7%A8%8B%EF%BC%88%E4%B8%89%EF%BC%89-hexo%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E4%B9%8Bnext/</id>
+    <published>2022-06-28T16:55:55.000Z</published>
+    <updated>2022-06-28T16:55:55.809Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>教程（二）hexo框架的搭建及部署</title>
